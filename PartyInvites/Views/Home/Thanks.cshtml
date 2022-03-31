@@ -26,11 +26,10 @@
             WebMail.EnableSsl = true;
             WebMail.UserName = "mySmtpUsername";
             WebMail.Password = "mySmtpPassword";
-            WebMail.From = "myemai@example.com";
+            WebMail.From = "myemail@example.com";
 
-            WebMail.Send("myemail@example.com", "RSVP Приглашение",
-                Model.Name + ((Model.WillAttend ?? false) ? " " : "не") + "придет");
-
+            WebMail.Send(to: "myemail@example.com", subject: "RSVP Приглашение",
+                body: Model.Name + ((Model.WillAttend ?? false) ? " " : "не") + "придет");
         }
         catch (Exception)
         {
