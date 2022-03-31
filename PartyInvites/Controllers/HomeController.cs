@@ -26,9 +26,13 @@ namespace PartyInvites.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guest)
         {
-            // Нужно отправить данные нового гостя no электронной почте 
-            // организатору вечеринки.
-            return View("Thanks", guest);
+            if (ModelState.IsValid)
+                // Нужно отправить данные нового гостя по электронной почте 
+                // организатору вечеринки.
+                return View("Thanks", guest);
+            else
+                // Обнаружена ошибка проверки достоверности
+                return View();
         }
     }
 }
