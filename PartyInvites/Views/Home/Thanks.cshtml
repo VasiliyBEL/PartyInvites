@@ -22,13 +22,13 @@
         try
         {
             WebMail.SmtpServer = "smtp.example.com";
-            WebMail.SmtpPort = 587;
+            WebMail.SmtpPort = 25;
             WebMail.EnableSsl = true;
             WebMail.UserName = "mySmtpUsername";
             WebMail.Password = "mySmtpPassword";
             WebMail.From = "myemail@example.com";
 
-            WebMail.Send(to: "myemail@example.com", subject: "RSVP Приглашение",
+            WebMail.Send(to: "myemai@example.com", subject: "RSVP Приглашение",
                 body: Model.Name + ((Model.WillAttend ?? false) ? " " : "не") + "придет");
         }
         catch (Exception)
@@ -41,11 +41,11 @@
         <div class="lead">
             @if (Model.WillAttend == true)
             {
-                @:Здорово что вы придете, напитки уже в холодильнике ;)
+                @:Спасибо за ваш ответ, будем ждать вас на вечеринке! ;)
             }
             else
             {
-                @:Жаль что вы не придете, но спасибо что дали об этом знать.
+                @:Жаль что вас не будет, но спасибо что дали об этом знать.
             }
         </div>
     </div>
