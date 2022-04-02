@@ -7,8 +7,8 @@ The following requirements have been met:
 3) Validation for the RSVP form, which will display a Thank You page;
 4) Means of sending RSVP forms by e-mail to the party organizer.
 
-В контексте приглашений на мероприятия, RSVP — это запрос подтверждения от приглашённого человека или людей. 
-RSVP — это акроним французской фразы Répondez s’il vous plaît, означающей буквально «Будьте добры ответить» или «Пожалуйста, ответьте». 
+In the context of event invitations, RSVP is a confirmation request from the invited person or people.
+RSVP is an acronym for the French phrase Répondez s'il vous plaît, literally meaning "Please answer" or "Please answer".
 
-Для отправления письма о принятии или отклонения приглашения может использоваться сервис https://email.netcorecloud.com для регистрации и использования smtp-сервера.
-В моем коде для создания и обработки электронных сообщений используется класс WebMail, для корректной работы требуется ввести свои данные (Views/Home/Thanks.cshtml).
+To send a letter of acceptance or rejection of an invitation, the https://email.netcorecloud.com service can be used to register and use the smtp server.
+My code uses the WebMail class to create and process emails, and requires you to enter your data (Views/Home/Thanks.cshtml) to work correctly.
